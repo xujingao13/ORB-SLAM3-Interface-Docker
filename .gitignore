@@ -1,3 +1,41 @@
+# Development Files
+container_root/.*
+container_root/colcon_ws/*
+container_root/colcon_ws/build/
+container_root/colcon_ws/install/
+container_root/colcon_ws/log/
+container_root/colcon_ws/src/
+container_root/colcon_ws/core*
+container_root/.cache/
+container_root/.cache/
+container_root/.config/
+container_root/.dotnet/
+container_root/.local/
+container_root/.pki/
+container_root/.ros/
+container_root/.rviz2/
+container_root/.viminfo
+container_root/.bash_history
+container_root/.cmake
+container_root/Database/
+container_root/olympe_streaming_test_*
+container_root/olympe/
+container_root/olympe_dev/olympe_streaming_test_*
+container_root/olympe_dev/olympe_streaming*
+container_root/.python_history
+container_root/.gnupg/
+
+**.vscode**
+showgit.py
+!colcon_ws/.vscode
+orb_slam3_ros2_wrapper/config
+.DS_Store
+*.osa
+orb_slam3_ros2_wrapper/params/olympe.yaml
+
+build/
+
+
 # Prerequisites
 *.d
 
