@@ -1,7 +1,3 @@
-After follow the main step below, try to running ```ros2 launch orb_slam3_ros2_wrapper mono```
-Because the mono type assume the depth based on the computer version so if you find the orbslam3 warning of "not initialized" please shake your camera! 
-
-
 # ORB-SLAM3 ROS2 Interface Docker
 
 This repository contains a dockerized comprehensive wrapper for ORB-SLAM3 on ROS 2 Humble for Ubuntu 22.04.
@@ -53,24 +49,26 @@ source install/setup.bash
 Launch the container using steps in (4).
 If you are inside the container, run the following:
 
-* Monocular: ```ros2 launch orb_slam3_ros2_wrapper unirobot_mono.launch.py``` 
+* Monocular: ```ros2 launch orb_slam3_ros2_wrapper unirobot_mono.launch.py```
 * Stereo: ```ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py```
 
 ## Running this with Olympe
 
-1. Set up your Olympe development environment: https://developer.parrot.com/docs/olympe/installation.html. Using a virtual environment is highly recommanded.
-1. Generate a parameter file of your Olympe parrot. We have prepared one if you want to use:
+1. Set up your Olympe development environment [here](https://developer.parrot.com/docs/olympe/installation.html). Using a virtual environment is highly recommanded [here](https://developer.parrot.com/docs/olympe/pip_on_debian_based_distros.html#best-practices).
+2. Generate a parameter file of your Olympe parrot. We have prepared one if you want to use:
 ```bash
 cd /root/colcon_ws/orb_slam3_ros2_wrapper/params
 cp olympe.yaml.temp olympe.yaml
 ```
-Then, change the ``*.yaml`` parameter file you want to use in ``unirobot_mono.launch.py``
-2. Launch ORB-SLAM3: ```ros2 launch orb_slam3_ros2_wrapper unirobot_mono.launch.py```. You should see a window popup which is waiting for images. This is partially indicative of the setup correctly done.
-3. Open another terminal and feed images to ORB-SLAM3 through Ros2. Make sure you are in the Olympe development environment
+3. Change the ``*.yaml`` parameter file you want to use in ``unirobot_mono.launch.py``
+4. Launch ORB-SLAM3: ```ros2 launch orb_slam3_ros2_wrapper unirobot_mono.launch.py```. You should see a window popup which is waiting for images. This is partially indicative of the setup correctly done.
+5. Open another terminal and feed images to ORB-SLAM3 through Ros2. Make sure you are in the Olympe development environment
 ```bash
 cd /root/olympe_dev
 python ros2_streaming.py
 ```
+
+Because the mono type assume the depth based on the computer version so if you find the orbslam3 warning of "not initialized" please shake your camera! 
 
 ## Running this with a Gazebo Classic simulation
 
