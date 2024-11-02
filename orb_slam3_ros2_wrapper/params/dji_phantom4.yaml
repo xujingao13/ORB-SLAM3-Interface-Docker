@@ -16,7 +16,10 @@
 # System.LoadAtlasFromFile: "Map/Map-CMU-0813-1050" 
 # System.LoadAtlasFromFile: "Map/Map-CMU-0813-1330" 
 # System.LoadAtlasFromFile: "Map/Map-CMU-0814-1330" 
-System.LoadAtlasFromFile: "Map/Map-Mill-19"
+# System.LoadAtlasFromFile: "Map/Map-Mill-19"
+# System.LoadAtlasFromFile: "Map/Map-Mill-19-Side"
+System.LoadAtlasFromFile: "Map/Map-Mill-19-Top"
+
 
 
 # The store file is created from the current session, if a file with the same name exists it is deleted
@@ -27,6 +30,8 @@ System.LoadAtlasFromFile: "Map/Map-Mill-19"
 # System.SaveAtlasToFile: "Map/Map-CMU-0813-1330"
 # System.SaveAtlasToFile: "Map/Map-CMU-0814-1330"
 # System.SaveAtlasToFile: "Map/Map-Mill-19"
+# System.SaveAtlasToFile: "Map/Map-Mill-19-Side"
+# System.SaveAtlasToFile: "Map/Map-Mill-19-Top"
 
 
 #--------------------------------------------------------------------------------------------
@@ -37,15 +42,15 @@ File.version: "1.0"
 Camera.type: "PinHole"
 
 # Camera calibration and distortion parameters (OpenCV) 
-Camera1.fx: 925.375
-Camera1.fy: 907.511
-Camera1.cx: 628.560
-Camera1.cy: 285.253
+Camera1.fx: 917.793
+Camera1.fy: 917.306
+Camera1.cx: 641.617
+Camera1.cy: 274.799
 
-Camera1.k1: 0.0120
-Camera1.k2: -0.0855
-Camera1.p1: 0.0031
-Camera1.p2: -0.0039
+Camera1.k1: 0.0152
+Camera1.k2: -0.0456
+Camera1.p1: 0.0037
+Camera1.p2: 0.00078
 
 Camera2.fx: 457.587
 Camera2.fy: 456.134
@@ -127,4 +132,4 @@ Viewer.ViewpointX: 0.0
 Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -1.8
 Viewer.ViewpointF: 500.0
-Viewer.imageViewScale: 1.0
+Viewer.imageViewScale: 0.5

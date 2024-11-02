@@ -48,7 +48,8 @@ def generate_launch_description():
         params_file = LaunchConfiguration('params_file')
         vocabulary_file_path = "/home/orb/ORB_SLAM3/Vocabulary/ORBvoc.txt"
         # config_file_path = "/root/colcon_ws/src/orb_slam3_ros2_wrapper/params/EuRoC.yaml" #EuRoC.yaml
-        config_file_path = "/root/colcon_ws/src/orb_slam3_ros2_wrapper/params/olympe.yaml" #EuRoC.yaml
+        # config_file_path = "/root/colcon_ws/src/orb_slam3_ros2_wrapper/params/olympe.yaml" #EuRoC.yaml
+        config_file_path = "/root/colcon_ws/src/orb_slam3_ros2_wrapper/params/dji_phantom4.yaml" #EuRoC.yaml
         # config_file_path = "/root/colcon_ws/src/orb_slam3_ros2_wrapper/params/scout_v2_mono.yaml"#scout_v2_rgbd.yaml
         declare_params_file_cmd = DeclareLaunchArgument(
             'params_file',
