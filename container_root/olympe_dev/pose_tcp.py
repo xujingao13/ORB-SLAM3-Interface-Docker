@@ -3,10 +3,12 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 import socket
 import json
+import sys
 
 class PoseTCPClient(Node):
-    def __init__(self):
+    def __init__(self, header_string="default"):
         super().__init__('pose_tcp_client')
+        self.header_string = header_string
         self.subscription = self.create_subscription(
             Pose,
             '/camera_pose',
@@ -32,9 +34,6 @@ class PoseTCPClient(Node):
 
     def send_pose_data(self):
         if self.pose_data:
-            position = self.pose_data.position
-            orientation = self.pose_data.orientation
-            # data = f'{position.x},{position.y},{position.z},{orientation.x},{orientation.y},{orientation.z},{orientation.w}\n'
             position = {
                 'x': self.pose_data.position.x,
                 'y': self.pose_data.position.y,
@@ -47,6 +46,7 @@ class PoseTCPClient(Node):
                 'z': self.pose_data.orientation.z
             }
             pose_data = {
+                'header': self.header_string,
                 'position': position,
                 'quaternion': quaternion
             }
@@ -61,7 +61,13 @@ class PoseTCPClient(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    pose_tcp_client = PoseTCPClient()
+    
+    # Get header string from command line arguments
+    header_string = "default"
+    if len(sys.argv) > 1:
+        header_string = sys.argv[1]
+    
+    pose_tcp_client = PoseTCPClient(header_string)
     try:
         rclpy.spin(pose_tcp_client)
     except KeyboardInterrupt:
