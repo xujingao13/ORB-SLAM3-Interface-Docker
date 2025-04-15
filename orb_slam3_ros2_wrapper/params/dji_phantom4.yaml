@@ -16,9 +16,10 @@
 # System.LoadAtlasFromFile: "Map/Map-CMU-0813-1050" 
 # System.LoadAtlasFromFile: "Map/Map-CMU-0813-1330" 
 # System.LoadAtlasFromFile: "Map/Map-CMU-0814-1330" 
-# System.LoadAtlasFromFile: "Map/Map-Mill-19"
+System.LoadAtlasFromFile: "Map/Map-Mill-19"
 # System.LoadAtlasFromFile: "Map/Map-Mill-19-Side"
-System.LoadAtlasFromFile: "Map/Map-Mill-19-Top"
+# System.LoadAtlasFromFile: "Map/Map-Mill-19-Top"
+# System.LoadAtlasFromFile: "Map/Map-temp"
 
 
 
@@ -32,6 +33,7 @@ System.LoadAtlasFromFile: "Map/Map-Mill-19-Top"
 # System.SaveAtlasToFile: "Map/Map-Mill-19"
 # System.SaveAtlasToFile: "Map/Map-Mill-19-Side"
 # System.SaveAtlasToFile: "Map/Map-Mill-19-Top"
+# System.SaveAtlasToFile: "Map/Map-temp"
 
 
 #--------------------------------------------------------------------------------------------

@@ -20,7 +20,7 @@ class PoseTCPClient(Node):
         self.tcp_port = 11223  # Replace with the appropriate port
         self.tcp_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.connect_to_server()
-        self.timer = self.create_timer(1.0, self.send_pose_data)  # Timer to send data every second
+        self.timer = self.create_timer(1.0/30, self.send_pose_data)  # Timer to send data every second
 
     def connect_to_server(self):
         try:
